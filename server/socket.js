@@ -6,7 +6,14 @@ import Emitter from './Emitter'
 
 import { LAUNCH_OPTIONS } from './consts'
 
-export const io = socket()
+import http from 'http'
+
+var server = http.createServer(function(request, response) {
+  response.writeHead(404)
+  response.end('lllll')
+})
+
+export const io = socket(server)
 export const emit = new Emitter(io)
 
 const onSearch = async (params) => {
@@ -22,3 +29,5 @@ const onSearch = async (params) => {
 io.on('connection', (client) => {
   client.on('search', onSearch)
 })
+
+server.listen(3000)
