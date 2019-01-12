@@ -1,0 +1,10 @@
+.Statistics {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 100%;
+  background: #f0f6fd;
+  padding: 16px;
+  font-size: 12px;
+  padding-right: 8px;
+}

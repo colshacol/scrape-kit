@@ -1,0 +1,9 @@
+.Status {
+  font-size: 10px;
+  font-weight: 900;
+  color: #5e13f3;
+}
+
+.Status.notConnected {
+  color: #e1175f;
+}
